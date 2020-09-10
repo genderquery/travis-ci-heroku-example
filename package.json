@@ -1,0 +1,26 @@
+{
+	"name": "travis-ci-example",
+	"version": "1.0.0",
+	"author": "Avery Larsen <hello@averylarsen.com>",
+	"license": "MIT",
+	"engines": {
+		"node": "12.x"
+	},
+	"scripts": {
+		"test": "jest",
+		"start": "node server.js",
+		"migrate": "knex migrate:latest",
+		"seed": "knex seed:run"
+	},
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"knex": "^0.21.5",
+		"pg": "^8.3.3"
+	},
+	"devDependencies": {
+		"@types/jest": "^26.0.13",
+		"jest": "^26.4.2",
+		"supertest": "^4.0.2"
+	}
+}
