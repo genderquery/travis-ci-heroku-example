@@ -4,8 +4,10 @@ node_js:
 services:
   - postgresql
 env:
-	- DATABASE_URL=postgres://postgres@/test_tb
+  - DATABASE_URL="postgres://postgres@/test_tb"
 before_script:
-	- psql -U postgres -c "CREATE DATABASE test_tb;"
-	- yarn knex migrate:latest
-	- yarn knex seed:run
+  - 'psql -U postgres -c "CREATE DATABASE test_tb;"'
+  - yarn knex migrate:latest
+  - yarn knex seed:run
+deploy:
+  provider: heroku
