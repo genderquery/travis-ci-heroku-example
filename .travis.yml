@@ -10,7 +10,8 @@ before_script:
   - yarn knex migrate:latest
   - yarn knex seed:run
 deploy:
-  provider: heroku:git
+  provider: heroku
   app: intense-sierra-80451
+  on: main
   api_key:
     secure: jsod6xMX2n51QZGyfQOObVVcueRvap7svjsWlFSJmQoAf19XlvOgGBa41K0JJBB5BlEzJuv+ZHV0EUdKNbCXlYwQ8oLzDn/spvBvDyNWIYJPULl6E5IHzo8h8l54cFsXUwQ91Tr1DKKTJOjllKwkd9yGNRZQs7ERDdfiJWih3Ns1NbxpC+le5mZHOYdxCf300bxt6A2mJLL1AguNO1HoeWi1SDZ7ja9Us+KINGjFNcebb8vvNAh7j9ns2tRR+R1Fm0N7ks6vN8O68267D4Kq4ayfYUn9dVbxMAc7k/oIaWDJEhHrTi2QYhpnfohC395XpgxGDgyIn1WTX9fdBWAjB7ixKhXtWZEg6NVwRCBZnAkSpoNOy9dwGQz96YP+V3U8BBMitTv8nUnZmJr6dnJFFaCTlRWRE8fOyzX6/PWF6DxbiMgshlZwDRFdSkRY2FZTOj0d3aoeREqdXv0HNnoUQSZQglHzKgyy/SlE9m5jYs+nGWCxPICM0tMPhc78/7N9d4XB+cg3Nvwn01uM7Bilh5JSEUnHBn/laMYgq87Cph6CqGDkl7NCdWxH3zz5YRRSPDy35OpNCS9ZLt/r38rdlMiOdPk8dm1ixyrRWi/M9nSTh4KI9WcBBHHz3+axspdxnrMrAUN76B1pFRQiwUCC/6wnhhPb0VSALB/CO7OlYYY=
