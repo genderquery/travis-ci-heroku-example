@@ -1,17 +1,17 @@
 language: node_js
 node_js:
-  - 12
+- 12
 services:
-  - postgresql
+- postgresql
 env:
-  - DATABASE_URL="postgres://postgres@/test_tb"
+- DATABASE_URL="postgres://postgres@/test_tb"
 before_script:
-  - 'psql -U postgres -c "CREATE DATABASE test_tb;"'
-  - yarn knex migrate:latest
-  - yarn knex seed:run
+- psql -U postgres -c "CREATE DATABASE test_tb;"
+- yarn knex migrate:latest
+- yarn knex seed:run
 deploy:
   provider: heroku
   app: intense-sierra-80451
   on: main
   api_key:
-    secure: jsod6xMX2n51QZGyfQOObVVcueRvap7svjsWlFSJmQoAf19XlvOgGBa41K0JJBB5BlEzJuv+ZHV0EUdKNbCXlYwQ8oLzDn/spvBvDyNWIYJPULl6E5IHzo8h8l54cFsXUwQ91Tr1DKKTJOjllKwkd9yGNRZQs7ERDdfiJWih3Ns1NbxpC+le5mZHOYdxCf300bxt6A2mJLL1AguNO1HoeWi1SDZ7ja9Us+KINGjFNcebb8vvNAh7j9ns2tRR+R1Fm0N7ks6vN8O68267D4Kq4ayfYUn9dVbxMAc7k/oIaWDJEhHrTi2QYhpnfohC395XpgxGDgyIn1WTX9fdBWAjB7ixKhXtWZEg6NVwRCBZnAkSpoNOy9dwGQz96YP+V3U8BBMitTv8nUnZmJr6dnJFFaCTlRWRE8fOyzX6/PWF6DxbiMgshlZwDRFdSkRY2FZTOj0d3aoeREqdXv0HNnoUQSZQglHzKgyy/SlE9m5jYs+nGWCxPICM0tMPhc78/7N9d4XB+cg3Nvwn01uM7Bilh5JSEUnHBn/laMYgq87Cph6CqGDkl7NCdWxH3zz5YRRSPDy35OpNCS9ZLt/r38rdlMiOdPk8dm1ixyrRWi/M9nSTh4KI9WcBBHHz3+axspdxnrMrAUN76B1pFRQiwUCC/6wnhhPb0VSALB/CO7OlYYY=
+    secure: IgVOdh0vd4JHNq8Sstcrl4MGxzewPH75xhUbn7NpImo2RBIzcIdkyNv/l7F2Z+NPbB87QwfIwypZsp37LGbd9JEVdVKyfo1/rUP3a0M4Z4lff4iEw9CdPXzLKomYvkWyOfdFqKDKWFG1/BgjL9hhSlMixACBeWcr9CoKN8Wzj3noj9ed1CfYLiHPFSkBcO2YNFAV9YJmeF+PCv16AeB/l3Sw/cYmwnSeT280WXZ+YWO+2FF4V9uhUEEFQqDzPYRjNF9OHPT4Xlxj2w8WDvIq10+1HA67gYlTAQ1pkblI0sOPv0nD5hkmnAF673KEz6WpBXdBdSIOqbYfnrow7jiQva9VWh338QuhBz0upjylhSv/1J5Bl4+wAiyrS9M+7qyPd6WzRmFKhBSPhGCHq6mpuBOE+2ncCXcPXHqdThuX89pR7DIxGZa4dbubFmL1mubQh5YFaE1aBi5pAd9rPGdff0tGymNthnrmSEoKMhAknXzOihiNABgx6jYRdyxpEWJ0lwFu3uCyqMIlAMskWHv97P209crSR8tciw30pV51agRVjIaTSJfG+AJUJPIQuFcz5rxvBxHUgS2vDKjGm5HmsCPgkWsVpeSmnEHPHsp1r+vdbMGmI4qEpA7HOphzK4HYGp/eQTo/LOa/59R71Dwm0Ff8y/0fUPCE+GuS87TSDMI=
